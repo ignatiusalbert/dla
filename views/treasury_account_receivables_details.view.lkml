@@ -74,8 +74,8 @@ view: treasury_account_receivables_details {
     sql: ${TABLE}.DunningLevel ;;
   }
 
-  dimension: exchange_rate {
-    type: number
+  measure: exchange_rate {
+    type: sum
     sql: ${TABLE}.ExchangeRate ;;
   }
 

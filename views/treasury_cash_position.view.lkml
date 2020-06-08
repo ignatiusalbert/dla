@@ -17,8 +17,8 @@ view: treasury_cash_position {
     sql: ${TABLE}.CompanyCode ;;
   }
 
-  dimension: credit_value_in_local_currency {
-    type: number
+  measure: credit_value_in_local_currency {
+    type: sum
     sql: ${TABLE}.CreditValueInLocalCurrency ;;
   }
 
@@ -42,8 +42,8 @@ view: treasury_cash_position {
     sql: ${TABLE}.DebitCreditNote ;;
   }
 
-  dimension: debit_value_in_local_currency {
-    type: number
+  measure: debit_value_in_local_currency {
+    type: sum
     sql: ${TABLE}.DebitValueInLocalCurrency ;;
   }
 
@@ -97,38 +97,23 @@ view: treasury_cash_position {
     sql: ${TABLE}.SEGMENT ;;
   }
 
-  dimension: string_field_23 {
-    type: string
-    sql: ${TABLE}.string_field_23 ;;
-  }
-
-  dimension: string_field_24 {
-    type: string
-    sql: ${TABLE}.string_field_24 ;;
-  }
-
-  dimension: string_field_25 {
-    type: string
-    sql: ${TABLE}.string_field_25 ;;
-  }
-
   dimension: username {
     type: string
     sql: ${TABLE}.Username ;;
   }
 
-  dimension: value_in_loca_lcurrency {
-    type: number
+  measure: value_in_loca_lcurrency {
+    type: sum
     sql: ${TABLE}.ValueInLocaLCurrency ;;
   }
 
-  dimension: value_in_original_transaction_currency {
-    type: number
+  measure: value_in_original_transaction_currency {
+    type: sum
     sql: ${TABLE}.ValueInOriginalTransactionCurrency ;;
   }
 
-  dimension: value_in_transaction_currency {
-    type: number
+  measure: value_in_transaction_currency {
+    type: sum
     sql: ${TABLE}.ValueInTransactionCurrency ;;
   }
 

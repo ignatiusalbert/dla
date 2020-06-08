@@ -2,13 +2,13 @@ view: treasury_account_payables {
   sql_table_name: `poc-looker-dla-msi.SMIG.TREASURY_ACCOUNT_PAYABLES`
     ;;
 
-  dimension: amount {
-    type: number
+  measure: amount {
+    type: sum
     sql: ${TABLE}.Amount ;;
   }
 
-  dimension: amount_in_lc {
-    type: number
+  measure: amount_in_lc {
+    type: sum
     sql: ${TABLE}.AmountInLC ;;
   }
 

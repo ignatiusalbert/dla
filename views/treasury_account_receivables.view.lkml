@@ -19,13 +19,13 @@ view: treasury_account_receivables {
     sql: ${TABLE}.AcctDocNo ;;
   }
 
-  dimension: amount_doc {
-    type: number
+  measure: amount_doc {
+    type: sum
     sql: ${TABLE}.AmountDoc ;;
   }
 
-  dimension: amount_lcl {
-    type: number
+  measure: amount_lcl {
+    type: sum
     sql: ${TABLE}.AmountLCL ;;
   }
 
@@ -74,8 +74,8 @@ view: treasury_account_receivables {
     sql: ${TABLE}.DunningLevel ;;
   }
 
-  dimension: exchange_rate {
-    type: number
+  measure: exchange_rate {
+    type: sum
     sql: ${TABLE}.ExchangeRate ;;
   }
 
