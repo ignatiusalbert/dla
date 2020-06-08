@@ -10,12 +10,12 @@ view: treasury_account_receivables_details {
   }
 
   dimension: account_no {
-    type: number
+    type: string
     sql: ${TABLE}.AccountNo ;;
   }
 
   dimension: acct_doc_no {
-    type: number
+    type: string
     sql: ${TABLE}.AcctDocNo ;;
   }
 
@@ -30,7 +30,7 @@ view: treasury_account_receivables_details {
   }
 
   dimension: company_code {
-    type: number
+    type: string
     sql: ${TABLE}.CompanyCode ;;
   }
 
@@ -40,7 +40,7 @@ view: treasury_account_receivables_details {
   }
 
   dimension: customer_id {
-    type: number
+    type: string
     sql: ${TABLE}.CustomerID ;;
   }
 
@@ -80,7 +80,7 @@ view: treasury_account_receivables_details {
   }
 
   dimension: invoice_no {
-    type: number
+    type: string
     sql: ${TABLE}.InvoiceNo ;;
   }
 
