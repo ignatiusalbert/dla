@@ -3,7 +3,7 @@ view: treasury_cash_position {
     ;;
 
   dimension: account_no {
-    type: string
+    type: number
     sql: ${TABLE}.AccountNo ;;
   }
 
