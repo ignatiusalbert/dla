@@ -3,17 +3,17 @@ view: treasury_cash_position {
     ;;
 
   dimension: account_no {
-    type: number
+    type: string
     sql: ${TABLE}.AccountNo ;;
   }
 
   dimension: accounting_document_no {
-    type: number
+    type: string
     sql: ${TABLE}.AccountingDocumentNo ;;
   }
 
   dimension: company_code {
-    type: number
+    type: string
     sql: ${TABLE}.CompanyCode ;;
   }
 
@@ -28,7 +28,7 @@ view: treasury_cash_position {
   }
 
   dimension: customer {
-    type: number
+    type: string
     sql: ${TABLE}.Customer ;;
   }
 
@@ -53,7 +53,7 @@ view: treasury_cash_position {
   }
 
   dimension: document_no {
-    type: number
+    type: string
     sql: ${TABLE}.DocumentNo ;;
   }
 
@@ -118,7 +118,7 @@ view: treasury_cash_position {
   }
 
   dimension: vendor {
-    type: number
+    type: string
     sql: ${TABLE}.Vendor ;;
   }
 
