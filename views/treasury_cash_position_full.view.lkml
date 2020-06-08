@@ -1,5 +1,5 @@
 view: treasury_cash_position {
-  sql_table_name: `poc-looker-dla-msi.SMIG.TREASURY_CASH_POSITION`
+  sql_table_name: `poc-looker-dla-msi.SMIG.TREASURY_CASH_POSITION_FULL`
     ;;
 
   dimension: account_no {
@@ -12,12 +12,17 @@ view: treasury_cash_position {
     sql: ${TABLE}.AccountingDocumentNo ;;
   }
 
+  dimension: cash_position {
+    type: string
+    sql: ${TABLE}.CashPosition ;;
+  }
+
   dimension: company_code {
     type: number
     sql: ${TABLE}.CompanyCode ;;
   }
 
-  measure: credit_value_in_local_currency {
+   measure: credit_value_in_local_currency {
     type: sum
     sql: ${TABLE}.CreditValueInLocalCurrency ;;
   }
@@ -28,7 +33,7 @@ view: treasury_cash_position {
   }
 
   dimension: customer {
-    type: string
+    type: number
     sql: ${TABLE}.Customer ;;
   }
 
@@ -118,7 +123,7 @@ view: treasury_cash_position {
   }
 
   dimension: vendor {
-    type: string
+    type: number
     sql: ${TABLE}.Vendor ;;
   }
 
