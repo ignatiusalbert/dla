@@ -144,6 +144,13 @@ view: treasury_account_receivables {
     sql: ${TABLE}.SalesTaxCode ;;
   }
 
+  dimension: AR_Age {
+    type: tier
+    tiers: [0,1,31,61,91]
+    style: integer
+    sql: ${TABLE}.DaysInArrears ;;
+  }
+
   measure: count {
     type: count
     drill_fields: [id]
