@@ -86,7 +86,7 @@ view: treasury_account_payables_details {
   }
 
   dimension: period_year {
-    type: string
+    type: number
     sql: ${TABLE}.PeriodYear ;;
   }
 
