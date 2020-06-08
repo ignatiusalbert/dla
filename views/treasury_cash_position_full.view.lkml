@@ -17,12 +17,17 @@ view: treasury_cash_position {
     sql: ${TABLE}.CashPosition ;;
   }
 
+  dimension: cash_position_full {
+    type: string
+    sql: ${TABLE}.CashPositionFull ;;
+  }
+
   dimension: company_code {
     type: number
     sql: ${TABLE}.CompanyCode ;;
   }
 
-   measure: credit_value_in_local_currency {
+  measure: credit_value_in_local_currency {
     type: sum
     sql: ${TABLE}.CreditValueInLocalCurrency ;;
   }
