@@ -28,7 +28,7 @@ view: treasury_account_payables {
   }
 
   dimension: company_code {
-    type: string
+    type: number
     sql: ${TABLE}.CompanyCode ;;
   }
 

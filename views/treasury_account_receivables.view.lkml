@@ -35,7 +35,7 @@ view: treasury_account_receivables {
   }
 
   dimension: company_code {
-    type: string
+    type: number
     sql: ${TABLE}.CompanyCode ;;
   }
 

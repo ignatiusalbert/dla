@@ -13,7 +13,7 @@ view: treasury_cash_position {
   }
 
   dimension: company_code {
-    type: string
+    type: number
     sql: ${TABLE}.CompanyCode ;;
   }
 
