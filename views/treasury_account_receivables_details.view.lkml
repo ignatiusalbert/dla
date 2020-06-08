@@ -75,7 +75,7 @@ view: treasury_account_receivables_details {
   }
 
   measure: exchange_rate {
-    type: sum
+    type: average
     sql: ${TABLE}.ExchangeRate ;;
   }
 

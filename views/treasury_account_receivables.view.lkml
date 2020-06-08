@@ -29,6 +29,11 @@ view: treasury_account_receivables {
     sql: ${TABLE}.AmountLCL ;;
   }
 
+  dimension: account_receivable_status {
+    type: string
+    sql: ${TABLE}.ARStatus ;;
+  }
+
   dimension: company_code {
     type: number
     sql: ${TABLE}.CompanyCode ;;
@@ -75,7 +80,7 @@ view: treasury_account_receivables {
   }
 
   measure: exchange_rate {
-    type: sum
+    type: average
     sql: ${TABLE}.ExchangeRate ;;
   }
 
