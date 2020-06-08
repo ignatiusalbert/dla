@@ -146,7 +146,7 @@ view: treasury_account_receivables {
 
   dimension: AR_Age {
     type: tier
-    tiers: [0,1,31,61,91]
+    tiers: [0,1,31,61,91,181]
     style: integer
     sql: ${TABLE}.DaysInArrears ;;
   }
