@@ -12,8 +12,13 @@ view: treasury_account_payables {
     sql: ${TABLE}.AmountInLC ;;
   }
 
-  dimension: belnr {
+  dimension: apstatus {
     type: string
+    sql: ${TABLE}.APStatus ;;
+  }
+
+  dimension: belnr {
+    type: number
     sql: ${TABLE}.BELNR ;;
   }
 
@@ -46,13 +51,14 @@ view: treasury_account_payables {
     type: time
     timeframes: [
       raw,
-      time,
       date,
       week,
       month,
       quarter,
       year
     ]
+    convert_tz: no
+    datatype: date
     sql: ${TABLE}.DocumentDate ;;
   }
 
@@ -70,13 +76,14 @@ view: treasury_account_payables {
     type: time
     timeframes: [
       raw,
-      time,
       date,
       week,
       month,
       quarter,
       year
     ]
+    convert_tz: no
+    datatype: date
     sql: ${TABLE}.EnteredOnDate ;;
   }
 
@@ -86,7 +93,7 @@ view: treasury_account_payables {
   }
 
   dimension: period_year {
-    type: string
+    type: number
     sql: ${TABLE}.PeriodYear ;;
   }
 
@@ -94,13 +101,14 @@ view: treasury_account_payables {
     type: time
     timeframes: [
       raw,
-      time,
       date,
       week,
       month,
       quarter,
       year
     ]
+    convert_tz: no
+    datatype: date
     sql: ${TABLE}.PostingDate ;;
   }
 
@@ -120,7 +128,7 @@ view: treasury_account_payables {
   }
 
   dimension: vendor_id {
-    type: string
+    type: number
     sql: ${TABLE}.VendorID ;;
   }
 
