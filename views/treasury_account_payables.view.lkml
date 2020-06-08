@@ -12,7 +12,7 @@ view: treasury_account_payables {
     sql: ${TABLE}.AmountInLC ;;
   }
 
-  dimension: apstatus {
+  dimension: account_payable_status {
     type: string
     sql: ${TABLE}.APStatus ;;
   }
