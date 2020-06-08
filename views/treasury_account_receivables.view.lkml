@@ -120,7 +120,7 @@ view: treasury_account_receivables {
   }
 
   dimension: period_year {
-    type: number
+    type: string
     sql: ${TABLE}.PeriodYear ;;
   }
 

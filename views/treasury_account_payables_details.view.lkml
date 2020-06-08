@@ -23,7 +23,7 @@ view: treasury_account_payables_details {
   }
 
   dimension: company_code {
-    type: number
+    type: string
     sql: ${TABLE}.CompanyCode ;;
   }
 
@@ -86,7 +86,7 @@ view: treasury_account_payables_details {
   }
 
   dimension: period_year {
-    type: number
+    type: string
     sql: ${TABLE}.PeriodYear ;;
   }
 
@@ -120,7 +120,7 @@ view: treasury_account_payables_details {
   }
 
   dimension: vendor_id {
-    type: number
+    type: string
     sql: ${TABLE}.VendorID ;;
   }
 
