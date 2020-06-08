@@ -19,13 +19,13 @@ view: treasury_account_receivables_details {
     sql: ${TABLE}.AcctDocNo ;;
   }
 
-  dimension: amount_doc {
-    type: number
+  measure: amount_doc {
+    type: sum
     sql: ${TABLE}.AmountDoc ;;
   }
 
-  dimension: amount_lcl {
-    type: number
+  measure: amount_lcl {
+    type: sum
     sql: ${TABLE}.AmountLCL ;;
   }
 
