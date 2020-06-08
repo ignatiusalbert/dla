@@ -102,7 +102,7 @@ view: treasury_cash_position {
     sql: ${TABLE}.Username ;;
   }
 
-  measure: value_in_loca_lcurrency {
+  measure: value_in_local_currency {
     type: sum
     sql: ${TABLE}.ValueInLocaLCurrency ;;
   }
