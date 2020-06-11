@@ -113,6 +113,11 @@ view: sales {
     sql: ${TABLE}.Sales_Volume ;;
   }
 
+  measure: volume {
+    type: number
+    sql:${sales_revenue} / ${price};;
+  }
+
   dimension: ship_to_part_desc {
     type: string
     sql: ${TABLE}.Ship_to_part_Desc ;;
