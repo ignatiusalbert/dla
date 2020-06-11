@@ -108,10 +108,10 @@ view: sales {
     sql: ${TABLE}.Sales_Revenue ;;
   }
 
-  measure: sales_volume {
-    type: sum
-    sql: ${TABLE}.Sales_Volume ;;
-  }
+  # measure: sales_volume {
+  #  type: sum
+  #  sql: ${TABLE}.Sales_Volume ;;
+  #}
 
   measure: volume {
     type: number
