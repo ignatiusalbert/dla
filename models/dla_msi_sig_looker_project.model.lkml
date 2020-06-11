@@ -37,3 +37,5 @@ explore: treasury_account_receivables {}
 explore: treasury_account_receivables_details {}
 
 explore: treasury_cash_position {}
+
+explore: sales {}
