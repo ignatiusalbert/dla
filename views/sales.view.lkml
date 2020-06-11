@@ -115,7 +115,7 @@ view: sales {
 
   measure: volume {
     type: number
-    sql:${sales_revenue} / ${price};;
+    sql:IF(${price} = 0, 0, ${sales_revenue} / ${price});;
   }
 
   dimension: ship_to_part_desc {
