@@ -77,7 +77,7 @@ view: sales {
     sql: ${TABLE}.Price ;;
   }
 
-  dimension: provice_desc {
+  dimension: province_desc {
     type: string
     sql: ${TABLE}.Provice_Desc ;;
     map_layer_name: provinces_layer
