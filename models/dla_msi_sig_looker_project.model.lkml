@@ -9,9 +9,14 @@ datagroup: dla_msi_sig_looker_project_default_datagroup {
   max_cache_age: "1 hour"
 }
 
+#map_layer: provinces_layer {
+#  file: "/data/provinces-simplified-topo.json"
+# property_key: "provinsi"
+#}
+
 map_layer: provinces_layer {
-  file: "/data/provinces-simplified-topo.json"
-  property_key: "provinsi"
+  file: "/data/indonesia-topojson-city-regency.json"
+  property_key: "Regency"
 }
 
 map_layer: city_layer {
