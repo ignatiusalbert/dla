@@ -16,7 +16,7 @@ map_layer: provinces_layer {
 
 map_layer: city_layer {
   file: "/data/indonesia-topojson-city-regency.json"
-#  property_key: "Kotamadya"
+  property_key: "Kotamadya"
 }
 
 persist_with: dla_msi_sig_looker_project_default_datagroup
