@@ -14,6 +14,11 @@ map_layer: provinces_layer {
   property_key: "provinsi"
 }
 
+map_layer: city_layer {
+  file: "/data/indonesia-topojson-city-regency.json"
+  property_key: "provinsi"
+}
+
 persist_with: dla_msi_sig_looker_project_default_datagroup
 
 explore: copa {}

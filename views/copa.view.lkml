@@ -101,6 +101,7 @@ view: copa {
   dimension: sales_district_desc {
     type: string
     sql: ${TABLE}.Sales_District_Desc ;;
+    map_layer_name: city_layer
   }
 
   measure: sales_revenue {
