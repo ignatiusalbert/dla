@@ -88,8 +88,8 @@ view: sales {
     sql: ${TABLE}.Province ;;
   }
 
-  dimension: quantity_after_conversion {
-    type: number
+  measure: quantity_after_conversion {
+    type: sum
     sql: ${TABLE}.Quantity_After_Conversion ;;
   }
 
