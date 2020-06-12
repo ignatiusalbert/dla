@@ -16,12 +16,12 @@ datagroup: dla_msi_sig_looker_project_default_datagroup {
 
 map_layer: provinces_layer {
   file: "/data/indonesia-topojson-city-regency.json"
-  property_key: "Regency"
+ # property_key: "Regency"
 }
 
 map_layer: city_layer {
   file: "/data/indonesia-topojson-city-regency.json"
-  property_key: "Kabupaten"
+ # property_key: "Kabupaten"
 }
 
 persist_with: dla_msi_sig_looker_project_default_datagroup
