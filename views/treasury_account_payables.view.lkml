@@ -34,7 +34,8 @@ view: treasury_account_payables {
 
   dimension: company_name {
     type: string
-    sql: if(COALESCE(${TABLE}.CompanyName,0) = 0, to_string(${TABLE}.CompanyCode), ${TABLE}.CompanyName)  ;;
+    #sql: if(COALESCE(${TABLE}.CompanyName,0) = 0, to_string(${TABLE}.CompanyCode), ${TABLE}.CompanyName)  ;;
+    sql: ${TABLE}.CompanyName ;;
   }
 
   dimension: currency {
@@ -113,10 +114,10 @@ view: treasury_account_payables {
     sql: ${TABLE}.NAME1 ;;
   }
 
-  dimension: vendor {
-    type: string
-    sql: IF(is_null(${vendor_name}), ${vendor_id}, ${vendor_name});;
-  }
+  #dimension: vendor {
+  #  type: string
+  #  sql: IF(is_null(${vendor_name}), ${vendor_id}, ${vendor_name});;
+  #}
 
   dimension: period_year {
     type: number
