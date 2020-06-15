@@ -1,5 +1,5 @@
 view: treasury_account_payables {
-  sql_table_name: `poc-looker-dla-msi.SMIG.TREASURY_ACCOUNT_PAYABLES`
+  sql_table_name: `poc-looker-dla-msi.SMIG.TREASURY_AP`
     ;;
 
   measure: amount {
@@ -30,6 +30,11 @@ view: treasury_account_payables {
   dimension: company_code {
     type: number
     sql: ${TABLE}.CompanyCode ;;
+  }
+
+  dimension: company_name {
+    type: string
+    sql: ${TABLE}.CompanyName ;;
   }
 
   dimension: currency {
@@ -87,9 +92,25 @@ view: treasury_account_payables {
     sql: ${TABLE}.EnteredOnDate ;;
   }
 
+  #dimension: lifnr {
+  #  type: number
+  #  sql: ${TABLE}.LIFNR ;;
+  #}
+
+
   dimension: local_currency {
     type: string
     sql: ${TABLE}.LocalCurrency ;;
+  }
+
+  #dimension: name1 {
+  #  type: string
+  #  sql: ${TABLE}.NAME1 ;;
+  #}
+
+  dimension: vendor_name {
+    type: string
+    sql:IF(${TABLE}.NAME1 = NULL, ${TABLE}.VendorID , ${TABLE}.NAME1);;
   }
 
   dimension: period_year {
@@ -128,7 +149,7 @@ view: treasury_account_payables {
   }
 
   dimension: vendor_id {
-    type: string
+    type: number
     sql: ${TABLE}.VendorID ;;
   }
 
@@ -144,6 +165,6 @@ view: treasury_account_payables {
 
   measure: count {
     type: count
-    drill_fields: []
+    drill_fields: [company_name]
   }
 }
