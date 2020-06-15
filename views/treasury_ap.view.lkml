@@ -28,13 +28,13 @@ view: treasury_account_payables {
   }
 
   dimension: company_code {
-    type: string
-    sql: to_string(${TABLE}.CompanyCode) ;;
+    type: number
+    sql: ${TABLE}.CompanyCode ;;
   }
 
   dimension: company_name {
     type: string
-    sql: if(${TABLE}.CompanyName = null, ${company_code}, ${TABLE}.CompanyName)  ;;
+    sql: if(${TABLE}.CompanyName = null, '8000', ${TABLE}.CompanyName)  ;;
   }
 
   dimension: currency {
