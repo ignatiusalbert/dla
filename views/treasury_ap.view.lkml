@@ -34,7 +34,7 @@ view: treasury_account_payables {
 
   dimension: company_name {
     type: string
-    sql: if(${TABLE}.CompanyName = null, '8000', ${TABLE}.CompanyName)  ;;
+    sql: if(${TABLE}.CompanyName = null, "8000", ${TABLE}.CompanyName)  ;;
   }
 
   dimension: currency {
