@@ -110,7 +110,7 @@ view: treasury_account_payables {
 
   dimension: vendor_name {
     type: string
-    sql:IF(COALESCE(${TABLE}.NAME1,0) = 0, ${TABLE}.VendorID , ${TABLE}.NAME1);;
+    sql:IF(is_null(${TABLE}.NAME1), ${TABLE}.VendorID , ${TABLE}.NAME1);;
   }
 
   dimension: period_year {
