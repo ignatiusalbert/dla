@@ -34,7 +34,7 @@ view: treasury_account_payables {
 
   dimension: company_name {
     type: string
-    sql: if(${TABLE}.CompanyName = null, "8000", ${TABLE}.CompanyName)  ;;
+    sql: if(isnull(${TABLE}.CompanyName) , to_string(${TABLE}.CompanyCode), ${TABLE}.CompanyName)  ;;
   }
 
   dimension: currency {
@@ -110,7 +110,7 @@ view: treasury_account_payables {
 
   dimension: vendor_name {
     type: string
-    sql:IF(${TABLE}.NAME1 = NULL, ${TABLE}.VendorID , ${TABLE}.NAME1);;
+    sql:IF(is_null(${TABLE}.NAME1), ${TABLE}.VendorID , ${TABLE}.NAME1);;
   }
 
   dimension: period_year {
