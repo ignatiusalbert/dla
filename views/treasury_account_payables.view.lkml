@@ -110,7 +110,12 @@ view: treasury_account_payables {
 
   dimension: vendor_name {
     type: string
-    sql:IF(is_null(${TABLE}.NAME1), ${TABLE}.VendorID , ${TABLE}.NAME1);;
+    sql: ${TABLE}.NAME1 ;;
+  }
+
+  dimension: vendor {
+    type: string
+    sql: IF(is_null(${vendor_name}), ${vendor_id}, ${vendor_name});;
   }
 
   dimension: period_year {
