@@ -73,7 +73,7 @@ view: copa {
   }
 
   measure: price {
-    type: sum
+    type: average
     sql: ${TABLE}.Price ;;
   }
 
@@ -111,7 +111,7 @@ view: copa {
 
   measure: avg_price{
     type: number
-    sql:${sales_revenue} / ${quantity_after_conversion};;
+    sql:IF(${quantity_after_conversion} = 0, 0, ${sales_revenue} / ${quantity_after_conversion});;
   }
 
   dimension: ship_to_part_desc {

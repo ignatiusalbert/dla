@@ -73,7 +73,7 @@ view: sales {
   }
 
   measure: price {
-    type: sum
+    type: average
     sql: ${TABLE}.Price ;;
   }
 
@@ -121,7 +121,7 @@ view: sales {
 
   measure: avg_price{
     type: number
-    sql:${sales_revenue} / ${quantity_after_conversion};;
+    sql:IF(${quantity_after_conversion} = 0, 0, ${sales_revenue} / ${quantity_after_conversion});;
   }
 
 
