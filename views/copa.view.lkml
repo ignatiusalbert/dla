@@ -109,6 +109,11 @@ view: copa {
     sql: ${TABLE}.Sales_Revenue ;;
   }
 
+  measure: avg_price{
+    type: number
+    sql:${sales_revenue} / ${quantity_after_conversion});;
+  }
+
   dimension: ship_to_part_desc {
     type: string
     sql: ${TABLE}.Ship_to_part_Desc ;;
