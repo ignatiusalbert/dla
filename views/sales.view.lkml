@@ -121,7 +121,7 @@ view: sales {
 
   measure: avg_price{
     type: number
-    sql:${sales_revenue} / ${quantity_after_conversion});;
+    sql:${sales_revenue} / ${quantity_after_conversion};;
   }
 
 
